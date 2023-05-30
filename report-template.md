@@ -27,10 +27,10 @@ ___
 > * changed `eval_metric` from `root_mean_squared_error` to `r2`  (~~poor score~~)
 > * assigned `registered` column to `sample_weight` of `TabularPredictor` (~~hardly changed anything~~)
 > * tried to use `tuning_data` in `fit()` splitting the `train` dataset (~~I don't know what went wrong...even tried using `num_bag_folds` and `num_stack_levels` but it constantly threw error...and then I snapped...~~)
-
+> * a different kind of error happened when I tried `dropout` (~~forgot to keep track of the error...~~)
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-> If that was the case, I'd spend more time into individual `model_hyperparams` tuning (or maybe I'd look into individual model weights). Because, 
+> If that was the case, I'd spend more time into individual `model_hyperparams` tuning (or maybe I'd look into individual model weights).
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model|hpo1|hpo2|hpo3|score|
@@ -54,4 +54,4 @@ ___
 ## Summary
 > * The model trained after EDA might have already been sufficiently complex to capture the underlying patterns in the given data. In such cases, further increasing the model's complexity through hyperparameter tuning might not lead to significant improvements.
 > * Maybe I needed to explore other possible things.
-> * Also there was a bit overfitting during the hyperparameter tuning (later hidden by `verbose=0`). So maybe, I somehow 
+> * Also there was a bit overfitting during the hyperparameter tuning (later hidden by `verbose=0`). So maybe, I somehow needed better regularization.
